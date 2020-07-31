@@ -7,6 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h1>Spring MVC Test</h1>
+<h1>Spring MVC Test Mofified</h1>
 </body>
 </html>
