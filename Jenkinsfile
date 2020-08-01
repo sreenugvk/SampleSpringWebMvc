@@ -31,5 +31,18 @@ pipeline{
                 }
             }
         }
+        stage('Deploy To Staging Environment'){
+            steps{
+                build job: 'deploy_application_staging_env'
+            }
+        }
+        stage('Deploye to Prod'){
+            steps{
+                timeout(time:5, unit:'DAYS'){
+                    input message: 'Approve Production Depooyment'
+                }
+                build job: 'deploy_App_Prod'
+            }
+        }
     }
 }
