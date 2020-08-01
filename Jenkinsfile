@@ -5,7 +5,10 @@ pipeline{
     }
     stages{
         stage('SCM'){
-            git branch: 'master', url: 'https://github.com/sreenugvk/SampleSpringWebMvc.git'
+            steps{
+                    git branch: 'master', url: 'https://github.com/sreenugvk/SampleSpringWebMvc.git'
+            }
+        
         }
         stage('Compile Stage'){
             steps{
