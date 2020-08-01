@@ -4,6 +4,9 @@ pipeline{
         maven 'local maven'
     }
     stages{
+        stage('SCM'){
+            git branch: 'master', url: 'https://github.com/sreenugvk/SampleSpringWebMvc.git'
+        }
         stage('Compile Stage'){
             steps{
                     sh 'mvn clean compile'
