@@ -3,21 +3,21 @@ pipeline{
     stages{
         stage('Compile Stage'){
             steps{
-                withmaven(maven : 'local maven'){
+                withMaven(maven : 'local maven'){
                     sh 'mvn clean compile'
                 }
             }
         }
         stage ('Testing Stage'){
             steps{
-                withmaven(maven: 'local maven'){
+                withMaven(maven: 'local maven'){
                     sh 'mvn test'
                 }
             }
         }
         stage('Package'){
             steps{
-                withmaven(maven: 'local maven'){
+                withMaven(maven: 'local maven'){
                     sh 'mvn package'
                 }
             }
